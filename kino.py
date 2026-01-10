@@ -12,7 +12,7 @@ async def check_user(user_id):
     for ch in CHANNELS:
         try:
             status = await bot._chat_memberget(ch, user_id).status
-            if status in ('left', 'kichked'):
+            if status in ('left', 'kicked'):
                 return False
         except:
             return False
